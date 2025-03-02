@@ -20,6 +20,11 @@ Przed rozpoczęciem upewnij się, że masz zainstalowane:
 - 📌 **Node.js (najnowsza wersja)** → [Pobierz tutaj](https://nodejs.org/)  
 - 📌 **Discord Developer Portal** → [Zarejestruj bota](https://discord.com/developers/applications)  
 
+Uruchom poniższe komendy w **CMD/PowerShell**, aby upewnić się, że masz wszystko gotowe:  
+- node -v            # Sprawdzenie wersji Node.js
+- npm -v             # Sprawdzenie wersji npm
+- git --version      # Sprawdzenie wersji Git (jeśli używasz)
+
 ### 🔑 **2. Ustawienia uprawnień (`Intents`)**  
 Aby bot działał poprawnie, musisz włączyć odpowiednie uprawnienia:  
 
@@ -36,37 +41,10 @@ Pobierz repozytorium i zainstaluj wymagane moduły:
 ```sh
 npm install 
 ```
+---
 
-## Config Bot
-module.exports = { 
-    token: "TWÓJ_TOKEN_BOTA",
-    guildId: "ID_TWOJEGO_SERWERA",
-    welcome: {
-        channelId: "ID_KANAŁU_POWITALNEGO",
-        embed: {
-            color: "#ff0000",
-            title: "NAZWA_SERWERA",
-            description: "Cześć, {user}! 🎉\nMiło Cię widzieć na **NAZWA_SERWERA!**\n\n**Obecnie mamy {memberCount} członków!**",
-            fields: [
-                {
-                    name: "👤 Użytkownik",
-                    value: "{user}",
-                    inline: true
-                },
-                {
-                    name: "📅 Data dołączenia",
-                    value: "{joinDate}",
-                    inline: true
-                }
-            ],
-            thumbnail: true,
-            timestamp: true
-        }
-    }
-};
-
-! Jeśli chcesz aby bot działał w tle użyj
-npm install -g pm2
-pm2 start index.js --name "DiscordBot"
-pm2 save
-
+- npm install -g pm2  # Instalacja PM2
+- pm2 start index.js --name "DiscordBot"  # Uruchomienie bota w tle
+- pm2 save  # Zapisanie ustawień PM2
+- pm2 logs  # Podgląd logów bota
+- pm2 list  # Lista wszystkich uruchomionych procesów
