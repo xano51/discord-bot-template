@@ -45,6 +45,7 @@ npm install
 ```
 
 ## Config Bot
+```sh
 module.exports = { 
     token: "TWÓJ_TOKEN_BOTA",
     guildId: "ID_TWOJEGO_SERWERA",
@@ -71,7 +72,7 @@ module.exports = {
         }
     }
 };
-
+```
 ! Jeśli chcesz aby bot działał w tle użyj
 ```sh
 npm install -g pm2
